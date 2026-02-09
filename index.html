@@ -1,0 +1,330 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Spoon-billed Sandpiper | Protect Function, Not Just Area</title>
+  <meta name="description" content="A student-built conservation website for Spoon-billed Sandpiper (Calidris pygmaea), focused on indirect impacts and functional habitat protection in Jiangsu / Yellow Sea." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Noto+Sans+SC:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+
+<body>
+  <header class="header">
+    <div class="container header__inner">
+      <a class="brand" href="#top" aria-label="Home">
+        <span class="brand__mark" aria-hidden="true"></span>
+        <span class="brand__text" data-i18n="brand">勺嘴鹬守护计划</span>
+      </a>
+
+      <nav class="nav">
+        <a href="#story" data-i18n="nav_story">故事</a>
+        <a href="#indirect" data-i18n="nav_indirect">间接影响</a>
+        <a href="#solutions" data-i18n="nav_solutions">建议</a>
+        <a href="#action" class="btn btn--sm" data-i18n="nav_action">我能做什么</a>
+      </nav>
+
+      <div class="header__right">
+        <button id="langBtn" class="chip" type="button" aria-label="Switch language">中文 / EN</button>
+      </div>
+    </div>
+  </header>
+
+  <main id="top">
+    <!-- HERO -->
+    <section class="hero">
+      <div class="container hero__grid">
+        <div class="hero__left">
+          <p class="kicker" data-i18n="hero_kicker">Yellow Sea · East Asian–Australasian Flyway</p>
+          <h1 class="hero__title">
+            <span data-i18n="hero_title_1">保护勺嘴鹬</span>
+            <span class="muted" data-i18n="hero_title_2">不只是“留住面积”</span>
+          </h1>
+          <p class="hero__desc" data-i18n="hero_desc">
+            勺嘴鹬（Spoon-billed Sandpiper, Calidris pygmaea）是极危物种。
+            我们关注“看不见的伤害”：栖息地破碎化导致能量消耗上升、觅食效率下降，最终影响生存与繁殖。
+          </p>
+          <div class="hero__cta">
+            <a class="btn" href="#indirect" data-i18n="hero_cta_primary">理解“间接影响”</a>
+            <a class="btn btn--ghost" href="#solutions" data-i18n="hero_cta_secondary">查看我们的建议</a>
+          </div>
+
+          <div class="stats">
+            <div class="stat card">
+              <div class="stat__num">CR</div>
+              <div class="stat__label" data-i18n="stat_1">IUCN 极危</div>
+            </div>
+            <div class="stat card">
+              <div class="stat__num">>65%</div>
+              <div class="stat__label" data-i18n="stat_2">黄海潮间带大幅缩减（研究估计）</div>
+            </div>
+            <div class="stat card">
+              <div class="stat__num">EAAF</div>
+              <div class="stat__label" data-i18n="stat_3">依赖迁飞网络</div>
+            </div>
+          </div>
+
+          <p class="note" data-i18n="hero_note">
+            * 课堂项目网站（学生制作）：聚焦江苏沿海与黄海关键停歇地，强调功能性栖息地与长期效应。
+          </p>
+        </div>
+
+        <div class="hero__right">
+          <div class="glass">
+            <div class="badge" aria-hidden="true">
+              <span class="dot"></span>
+              <span data-i18n="badge">Functional Habitat</span>
+            </div>
+            <h3 class="glass__title" data-i18n="glass_title">“功能性栖息地”是什么意思？</h3>
+            <p class="glass__desc" data-i18n="glass_desc">
+              对迁徙滨鸟来说，潮滩觅食地 + 高潮栖息地必须“距离足够近、可达性足够高”。
+              只保护一块区域的面积，但让它们彼此分离，会产生持续的能量成本。
+            </p>
+
+            <div class="mini-steps">
+              <div class="mini-step">
+                <div class="mini-step__icon">1</div>
+                <div>
+                  <div class="mini-step__title" data-i18n="mini_1_title">碎片化</div>
+                  <div class="mini-step__text" data-i18n="mini_1_text">觅食地与休息地被切开</div>
+                </div>
+              </div>
+              <div class="mini-step">
+                <div class="mini-step__icon">2</div>
+                <div>
+                  <div class="mini-step__title" data-i18n="mini_2_title">能量消耗上升</div>
+                  <div class="mini-step__text" data-i18n="mini_2_text">飞行距离更长、频率更高</div>
+                </div>
+              </div>
+              <div class="mini-step">
+                <div class="mini-step__icon">3</div>
+                <div>
+                  <div class="mini-step__title" data-i18n="mini_3_title">长期后果</div>
+                  <div class="mini-step__text" data-i18n="mini_3_text">生存与繁殖成功率下降</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="glass__foot">
+              <a class="link" href="#resources" data-i18n="glass_link">查看参考资料</a>
+            </div>
+          </div>
+
+          <div class="bg-orb orb-1" aria-hidden="true"></div>
+          <div class="bg-orb orb-2" aria-hidden="true"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- STORY -->
+    <section id="story" class="section">
+      <div class="container">
+        <div class="section__head">
+          <h2 data-i18n="story_title">从“通州湾开发”到迁飞网络</h2>
+          <p class="section__sub" data-i18n="story_sub">
+            本地看起来合理的开发决策，可能在迁飞尺度上造成更大的生态后果（scale mismatch）。
+          </p>
+        </div>
+
+        <div class="grid-2">
+          <div class="card lift">
+            <h3 data-i18n="story_card1_title">为什么江苏沿海重要？</h3>
+            <ul class="bullets">
+              <li data-i18n="story_li1">黄海潮间带是关键补给站：停歇、换羽、迁徙“加油”。</li>
+              <li data-i18n="story_li2">勺嘴鹬等濒危水鸟依赖连贯的栖息地网络，而不是单点。</li>
+              <li data-i18n="story_li3">保护区与项目环评常按行政边界做，但鸟按迁飞路线“跨区域使用”。</li>
+            </ul>
+          </div>
+
+          <div class="card lift">
+            <h3 data-i18n="story_card2_title">你们研究的视角（课堂项目）</h3>
+            <ul class="bullets">
+              <li data-i18n="story_li4">不仅看“面积减少”，更看“功能是否还能用”。</li>
+              <li data-i18n="story_li5">重点是间接损伤：破碎化、可达性下降、能量成本上升。</li>
+              <li data-i18n="story_li6">长期、累积、滞后效应：当数量下降被看见时，往往已经晚了。</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- INDIRECT -->
+    <section id="indirect" class="section section--tint">
+      <div class="container">
+        <div class="section__head">
+          <h2 data-i18n="indirect_title">间接影响：看不见的伤害</h2>
+          <p class="section__sub" data-i18n="indirect_sub">
+            不是“当场死亡”，而是通过能量预算与觅食效率，慢慢把生存概率拉低。
+          </p>
+        </div>
+
+        <div class="timeline">
+          <div class="tl-item card">
+            <div class="tl-tag" data-i18n="tl_1_tag">Fragmentation</div>
+            <h3 data-i18n="tl_1_title">觅食地与高潮栖息地分离</h3>
+            <p data-i18n="tl_1_text">潮滩觅食与高潮休息需要近距离配合；一旦被切割，就会增加往返成本。</p>
+          </div>
+
+          <div class="tl-item card">
+            <div class="tl-tag" data-i18n="tl_2_tag">Energy Cost</div>
+            <h3 data-i18n="tl_2_title">飞得更远 → 消耗更多能量</h3>
+            <p data-i18n="tl_2_text">迁徙/换羽期本就“能量紧张”，额外消耗会挤压觅食与恢复时间。</p>
+          </div>
+
+          <div class="tl-item card">
+            <div class="tl-tag" data-i18n="tl_3_tag">Long-term</div>
+            <h3 data-i18n="tl_3_title">觅食效率下降 → 生存/繁殖下降</h3>
+            <p data-i18n="tl_3_text">影响往往滞后出现，且多个项目叠加会放大风险（cumulative effects）。</p>
+          </div>
+        </div>
+
+        <div class="callout">
+          <div class="callout__icon" aria-hidden="true">✓</div>
+          <div>
+            <div class="callout__title" data-i18n="callout_title">一句话结论</div>
+            <div class="callout__text" data-i18n="callout_text">
+              保护需要覆盖“功能”与“连通性”，而不只是把某块地划进保护区。
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SOLUTIONS -->
+    <section id="solutions" class="section">
+      <div class="container">
+        <div class="section__head">
+          <h2 data-i18n="sol_title">我们组的建议：如何减轻 indirect harm</h2>
+          <p class="section__sub" data-i18n="sol_sub">
+            不否定发展，但把“功能性栖息地”纳入规划与评估：更可行、更可解释。
+          </p>
+        </div>
+
+        <div class="grid-3">
+          <div class="card lift">
+            <div class="icon">🧭</div>
+            <h3 data-i18n="sol_1_title">保护功能性连通性</h3>
+            <p data-i18n="sol_1_text">优先保障觅食地与高潮栖息地的近距离组合，避免“孤岛式保护”。</p>
+          </div>
+
+          <div class="card lift">
+            <div class="icon">📏</div>
+            <h3 data-i18n="sol_2_title">设置“距离阈值”与缓冲带</h3>
+            <p data-i18n="sol_2_text">规划中控制觅食—栖息往返距离与干扰源（道路、工地、照明）的叠加效应。</p>
+          </div>
+
+          <div class="card lift">
+            <div class="icon">🧾</div>
+            <h3 data-i18n="sol_3_title">把间接/累积效应写进环评</h3>
+            <p data-i18n="sol_3_text">从“项目级短期”升级到“区域级长期”：评估破碎化、可达性与能量成本。</p>
+          </div>
+
+          <div class="card lift">
+            <div class="icon">🛰️</div>
+            <h3 data-i18n="sol_4_title">用监测数据闭环验证</h3>
+            <p data-i18n="sol_4_text">开发后持续监测鸟类到达率、停歇时长与潮滩利用，避免“建完就结束”。</p>
+          </div>
+
+          <div class="card lift">
+            <div class="icon">🤝</div>
+            <h3 data-i18n="sol_5_title">跨项目协同（scale match）</h3>
+            <p data-i18n="sol_5_text">鸟按迁飞网络使用栖息地，规划也应跨区域协调，而非各管一段海岸线。</p>
+          </div>
+
+          <div class="card lift">
+            <div class="icon">🌱</div>
+            <h3 data-i18n="sol_6_title">优先“减少干扰”型措施</h3>
+            <p data-i18n="sol_6_text">控制人流、车辆、噪声与夜间灯光，降低栖息地可达性下降带来的间接损失。</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ACTION -->
+    <section id="action" class="section section--tint">
+      <div class="container">
+        <div class="section__head">
+          <h2 data-i18n="action_title">我能做什么？</h2>
+          <p class="section__sub" data-i18n="action_sub">把“关注”变成可验证的行动：记录、传播、支持更好的规划。</p>
+        </div>
+
+        <div class="grid-2">
+          <div class="card">
+            <h3 data-i18n="action_card1_title">参与观察与记录</h3>
+            <ul class="bullets">
+              <li data-i18n="action_li1">学习基本识别特征，关注迁徙季的停歇地。</li>
+              <li data-i18n="action_li2">参与公民科学：上传观测记录，帮助追踪种群变化。</li>
+            </ul>
+          </div>
+          <div class="card">
+            <h3 data-i18n="action_card2_title">传播“间接影响”的概念</h3>
+            <ul class="bullets">
+              <li data-i18n="action_li3">把话题从“有没有保护区”推进到“功能还能不能用”。</li>
+              <li data-i18n="action_li4">支持区域级规划与长期监测，让环评更接近真实生态过程。</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="cta-band">
+          <div>
+            <div class="cta-band__title" data-i18n="cta_title">课堂展示用：一页讲清“indirect harm”</div>
+            <div class="cta-band__text" data-i18n="cta_text">碎片化 → 距离增加 → 能量成本上升 → 觅食效率下降 → 生存/繁殖下降</div>
+          </div>
+          <button class="btn" id="copyChainBtn" type="button" data-i18n="cta_btn">一键复制这句话</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- RESOURCES -->
+    <section id="resources" class="section">
+      <div class="container">
+        <div class="section__head">
+          <h2 data-i18n="res_title">参考资料（权威）</h2>
+          <p class="section__sub" data-i18n="res_sub">用于你们课堂引用/展示（可直接点开）。</p>
+        </div>
+
+        <div class="resource-list">
+          <a class="resource card" href="https://www.iucnredlist.org/species/21474/45174127" target="_blank" rel="noreferrer">
+            <div class="resource__title">IUCN Red List — Spoon-billed Sandpiper</div>
+            <div class="resource__meta" data-i18n="res_iucn">极危（CR）物种条目</div>
+          </a>
+          <a class="resource card" href="https://datazone.birdlife.org/species/factsheet/spoon-billed-sandpiper-calidris-pygmaea" target="_blank" rel="noreferrer">
+            <div class="resource__title">BirdLife Data Zone — Species Factsheet</div>
+            <div class="resource__meta" data-i18n="res_birdlife">种群与威胁概览</div>
+          </a>
+          <a class="resource card" href="https://www.nature.com/articles/ncomms14895" target="_blank" rel="noreferrer">
+            <div class="resource__title">Studds et al., 2017 (Nature Communications)</div>
+            <div class="resource__meta" data-i18n="res_studds">黄海潮间带与迁徙滨鸟下降关系</div>
+          </a>
+          <a class="resource card" href="https://eaaflyway.net/spoon-billed-sandpiper/" target="_blank" rel="noreferrer">
+            <div class="resource__title">EAAFP — Spoon-billed Sandpiper</div>
+            <div class="resource__meta" data-i18n="res_eaafp">迁飞伙伴关系与行动计划信息</div>
+          </a>
+          <a class="resource card" href="https://whc.unesco.org/en/list/1606/" target="_blank" rel="noreferrer">
+            <div class="resource__title">UNESCO — Yellow Sea Migratory Bird Sanctuaries</div>
+            <div class="resource__meta" data-i18n="res_unesco">黄海世界遗产地官方介绍</div>
+          </a>
+        </div>
+
+        <footer class="footer">
+          <div class="footer__grid">
+            <div>
+              <div class="footer__title" data-i18n="footer_title">Team Project Site</div>
+              <div class="footer__text" data-i18n="footer_text">
+                Made for ENVIR 101 · Focus: Jiangsu coastal wetlands, indirect impacts & functional habitat protection.
+              </div>
+            </div>
+            <div class="footer__right">
+              <a class="link" href="#top" data-i18n="back_top">回到顶部 ↑</a>
+            </div>
+          </div>
+        </footer>
+      </div>
+    </section>
+  </main>
+
+  <script src="./script.js"></script>
+</body>
+</html>
