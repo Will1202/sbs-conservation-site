@@ -104,6 +104,12 @@ window.I18N = {
     footer_note: "Protecting functional habitat across the Yellow Sea flyway.",
     back_top: "回到顶部 ↑",
     lb_note: "提示：你可以把这里的图片换成你们自己的潮滩/开发区域/水鸟图片。"
+
+    pv_t: "通州湾相关材料：沿海光伏开发",
+    pv_d: "用于“间接影响”讨论的材料：沿海光伏/渔光互补可能改变潮滩结构与干扰格局，降低栖息地可用性与连通性。",
+    pv_c1: "沿海“渔光互补”场景（参考图）",
+    pv_c2: "滩涂光伏场景（参考图）",
+
   },
 
   en: {
