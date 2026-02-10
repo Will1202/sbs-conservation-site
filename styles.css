@@ -325,3 +325,21 @@ a{color:inherit; text-decoration:none}
   .lightbox__grid{grid-template-columns:1fr}
   .lightbox__img{height: 240px}
 }
+
+.pvGallery{margin-top:14px}
+.pvGallery__head{display:flex; justify-content:space-between; align-items:flex-end; gap:10px; flex-wrap:wrap}
+.pvGallery__grid{margin-top:12px; display:grid; grid-template-columns: 1fr 1fr; gap:12px}
+.pvFigure{margin:0}
+.pvFigure img{
+  width:100%;
+  height:220px;
+  object-fit:cover;
+  border-radius:16px;
+  border:1px solid rgba(255,255,255,.12);
+  transition: transform .18s ease, border .18s ease;
+}
+.pvFigure img:hover{transform: translateY(-2px); border-color: rgba(102,245,198,.55)}
+@media (max-width: 980px){
+  .pvGallery__grid{grid-template-columns:1fr}
+  .pvFigure img{height:200px}
+}
