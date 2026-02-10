@@ -126,7 +126,7 @@ window.I18N = {
     nav_strategy: "Strategy",
     nav_action: "Take action",
     btn_join: "Join",
-    btn_donate: "Support",
+    btn_donate: "Donate",
 
     hero_pill: "Yellow Sea · East Asian–Australasian Flyway",
     hero_title_1: "Protect the Spoon-billed Sandpiper",
