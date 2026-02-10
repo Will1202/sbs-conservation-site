@@ -13,7 +13,7 @@ window.I18N = {
     hero_title_1: "为勺嘴鹬",
     hero_title_2: "守住“能用的栖息地”",
     hero_lead:
-      "许多破坏不是“立刻死亡”，而是通过栖息地破碎化让鸟类付出持续能量成本，逐渐降低生存与繁殖成功率。我们推动以功能性栖息地为核心的保护与规划，让迁徙网络持续可用。",
+       "在江苏通州湾等黄海沿海潮间带，勺嘴鹬依赖停歇地补给完成迁徙。很多伤害不是“立刻死亡”，而是栖息地破碎化与干扰叠加带来持续能量成本，逐渐降低生存与繁殖成功率。我们推动以功能性栖息地为核心的保护与规划，让迁徙网络持续可用。",
     hero_cta_primary: "我们的保护策略",
     hero_cta_secondary: "先看科普知识",
     metric_cr: "极危（IUCN）",
@@ -120,7 +120,7 @@ window.I18N = {
     hero_title_1: "Protect the Spoon-billed Sandpiper",
     hero_title_2: "by safeguarding functional habitat",
     hero_lead:
-      "Many impacts are not immediate mortality. Fragmentation raises persistent energy costs and gradually reduces survival and breeding success. We advocate conservation and planning that keep the flyway’s habitat network truly usable.",
+      "Along the Yellow Sea coast—including Tongzhou Bay in Jiangsu—the Spoon-billed Sandpiper relies on stopovers to refuel during migration. Many impacts are not immediate mortality: fragmentation and disturbance increase energy costs and gradually reduce survival and breeding success. We advocate function-first conservation to keep the flyway network truly usable.",
     hero_cta_primary: "Our strategy",
     hero_cta_secondary: "Learn first",
     metric_cr: "IUCN: CR",
