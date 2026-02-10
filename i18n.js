@@ -217,5 +217,11 @@ window.I18N = {
     footer_note: "Protecting functional habitat across the Yellow Sea flyway.",
     back_top: "Back to top ↑",
     lb_note: "Tip: replace these images with your own photos anytime."
+
+    pv_t: "Tongzhou Bay material: coastal solar development",
+    pv_d: "Reference material for indirect-harm discussion: coastal PV can reshape mudflat structure and disturbance patterns, reducing habitat usability and connectivity.",
+    pv_c1: "Coastal fishery + solar scene (reference)",
+    pv_c2: "Tidal-flat photovoltaic scene (reference)",
+
   }
 };
