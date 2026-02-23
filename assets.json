@@ -21,28 +21,28 @@
       "enTitle": "Close-up"
     },
     {
-      "url": "./images/sbs-5.png",
+      "url": "./images/sbs-5.jpg",
       "zhTitle": "勺嘴鹬 · 栖息地使用",
       "enTitle": "Habitat use"
     }
   ],
   "storyImages": [
     {
-      "url": "./images/sbs-2.png",
+      "url": "./images/sbs-6.png",
       "zhTitle": "它依赖“停歇地链条”补给",
       "enTitle": "It depends on a chain of stopovers",
       "zhDesc": "迁徙过程中任何一个关键停歇点功能下降，都可能在后续阶段放大风险。",
       "enDesc": "Functional loss at a key stopover can cascade and amplify risks later in migration."
     },
     {
-      "url": "./images/sbs-1.png",
+      "url": "./images/sbs-7.png",
       "zhTitle": "间接影响不是“立刻死亡”",
       "enTitle": "Indirect harm is not immediate mortality",
       "zhDesc": "栖息地破碎化会增加往返距离与能量成本，挤压觅食与恢复时间。",
       "enDesc": "Fragmentation increases commuting distance and energy cost, reducing feeding and recovery time."
     },
     {
-      "url": "./images/sbs-5.png",
+      "url": "./images/sbs-8.png",
       "zhTitle": "功能性栖息地：能不能用更关键",
       "enTitle": "Functional habitat: usability matters most",
       "zhDesc": "不仅要有面积，还要“可达、可用、连通”。",
