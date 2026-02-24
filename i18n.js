@@ -46,7 +46,7 @@ window.I18N = {
 
     learn_title: "科普：认识勺嘴鹬与迁徙生态",
     learn_sub: "用 3 分钟理解：为什么黄海潮间带重要？什么是“功能性栖息地”？为什么间接影响更危险？",
-    learn_1_t: "关键事实（可引用）",
+    learn_1_t: "关键事实",
     fact_1: "勺嘴鹬被列为 IUCN 极危（CR）。",
     fact_2: "黄海潮间带是迁徙滨鸟的重要停歇地；研究指出泥滩在近几十年缩减超过 65%。",
     fact_3: "保护的难点在于：影响常常是长期、累积、滞后出现。",
@@ -165,7 +165,7 @@ window.I18N = {
 
     learn_title: "Learn: the species and migration ecology",
     learn_sub: "In 3 minutes: why Yellow Sea mudflats matter, what “functional habitat” means, and why indirect harm is dangerous.",
-    learn_1_t: "Key facts (citable)",
+    learn_1_t: "Key facts",
     fact_1: "The Spoon-billed Sandpiper is listed as Critically Endangered (CR) by IUCN.",
     fact_2: "Yellow Sea mudflats are key stopovers; studies indicate tidal flats shrank by >65% in recent decades.",
     fact_3: "The hardest part: impacts are cumulative and time-lagged.",
