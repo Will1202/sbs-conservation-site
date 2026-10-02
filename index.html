@@ -1,491 +1,125 @@
 <!doctype html>
 <html lang="zh-CN">
-
 <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <title>Spoon-billed Sandpiper Conservation Network</title>
-    <meta name="description"
-        content="A conservation website to protect the Spoon-billed Sandpiper by safeguarding functional habitat and reducing indirect harm across the Yellow Sea flyway." />
-    <meta name="theme-color" content="#07110e" />
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=Noto+Sans+SC:wght@400;600;700;800&display=swap"
-        rel="stylesheet">
-
-    <link rel="stylesheet" href="./styles.css" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Spoon-billed Sandpiper | Habitat &amp; Flyway Conservation</title>
+  <meta name="description" content="A bilingual conservation education project exploring the Spoon-billed Sandpiper, Yellow Sea stopover habitats, and the ecological effects of coastal development.">
+  <meta name="theme-color" content="#263e30">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Spoon-billed Sandpiper | Habitat & Flyway Conservation">
+  <meta property="og:description" content="A small shorebird. A connected coastline. Explore the habitats that make migration possible.">
+  <meta property="og:url" content="https://will1202.github.io/sbs-conservation-site/">
+  <meta property="og:image" content="https://will1202.github.io/sbs-conservation-site/docs/previews/social.png">
+  <meta property="og:image:alt" content="Spoon-billed Sandpiper conservation project homepage">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="canonical" href="https://will1202.github.io/sbs-conservation-site/">
+  <link rel="icon" type="image/svg+xml" href="./images/favicon.svg">
+  <link rel="preload" as="image" href="./images/sbs-1.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Libre+Caslon+Display&family=Noto+Sans+SC:wght@400;500;600;700&family=Noto+Serif+SC:wght@500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./styles.css">
+  <script src="./i18n.js" defer></script>
+  <script src="./app.js" defer></script>
 </head>
-
 <body>
-    <!-- Topbar -->
-    <header class="topbar">
-        <div class="container topbar__inner">
-            <a class="brand" href="#top" aria-label="Home">
-                <span class="brand__mark" aria-hidden="true"></span>
-                <span class="brand__name" data-i18n="brand">勺嘴鹬保护网络</span>
-            </a>
-
-            <nav class="nav" aria-label="Primary navigation">
-                <a href="#mission" data-i18n="nav_mission">使命</a>
-                <a href="#learn" data-i18n="nav_learn">科普</a>
-                <a href="#threats" data-i18n="nav_threats">威胁</a>
-                <a href="#strategy" data-i18n="nav_strategy">策略</a>
-                <a href="#action" data-i18n="nav_action">行动</a>
-            </nav>
-
-            <div class="topbar__actions">
-                <button id="langBtn" class="chip" type="button" aria-label="Switch language">中文 / EN</button>
-                <a class="btn btn--ghost btn--sm" href="#action" data-i18n="btn_join">加入我们</a>
-                <a class="btn btn--sm" href="#action" data-i18n="btn_donate">支持保护</a>
-            </div>
-        </div>
-    </header>
-
-    <main id="top">
-        <!-- HERO with dynamic slideshow -->
-        <section class="hero">
-            <div class="hero__bg" id="heroBg" aria-hidden="true"></div>
-            <div class="hero__scrim" aria-hidden="true"></div>
-
-            <div class="container hero__grid">
-                <div class="hero__copy">
-                    <div class="pill">
-                        <span class="pill__dot" aria-hidden="true"></span>
-                        <span data-i18n="hero_pill">Yellow Sea · 东亚—澳大利西亚迁飞区</span>
-                    </div>
-
-                    <h1 class="hero__title">
-                        <span data-i18n="hero_title_1">为勺嘴鹬</span>
-                        <span class="hero__titleAccent" data-i18n="hero_title_2">守住“能用的栖息地”</span>
-                    </h1>
-
-                    <p class="hero__lead" data-i18n="hero_lead">
-                        许多破坏不是“立刻死亡”，而是通过栖息地破碎化让鸟类付出持续能量成本，逐渐降低生存与繁殖成功率。
-                        我们推动以功能性栖息地为核心的保护与规划，让迁徙网络持续可用。
-                    </p>
-
-                    <div class="hero__ctas">
-                        <a class="btn" href="#strategy" data-i18n="hero_cta_primary">我们的保护策略</a>
-                        <a class="btn btn--ghost" href="#learn" data-i18n="hero_cta_secondary">先看科普知识</a>
-                    </div>
-
-                    <div class="metrics">
-                        <div class="metric card">
-                            <div class="metric__k">CR</div>
-                            <div class="metric__v" data-i18n="metric_cr">极危（IUCN）</div>
-                            <div class="metric__s" data-i18n="metric_cr_s">濒危等级：Critically Endangered</div>
-                        </div>
-
-                        <div class="metric card">
-                            <div class="metric__k"><span class="count" data-count="65">0</span>%+</div>
-                            <div class="metric__v" data-i18n="metric_loss">潮间带缩减</div>
-                            <div class="metric__s" data-i18n="metric_loss_s">黄海泥滩在近几十年缩减 >65%</div>
-                        </div>
-
-                        <div class="metric card">
-                            <div class="metric__k">Flyway</div>
-                            <div class="metric__v" data-i18n="metric_flyway">迁飞网络</div>
-                            <div class="metric__s" data-i18n="metric_flyway_s">依赖跨区域停歇地“链条”</div>
-                        </div>
-                    </div>
-
-                    <div class="hero__thumbs" id="heroThumbs" aria-label="Hero image selector"></div>
-                    <p class="hero__tiny" data-i18n="hero_tiny">
-                        影像：勺嘴鹬与通州湾相关影像资料。
-                    </p>
-                </div>
-
-                <div class="hero__panel">
-                    <div class="panel card">
-                        <div class="panel__top">
-                            <div class="badge" data-i18n="panel_badge">核心机制</div>
-                            <div class="panel__title" data-i18n="panel_title">间接影响（Indirect harm）如何发生？</div>
-                        </div>
-
-                        <div class="chain">
-                            <div class="chain__item">
-                                <div class="chain__num">1</div>
-                                <div>
-                                    <div class="chain__t" data-i18n="chain_1_t">破碎化</div>
-                                    <div class="chain__d" data-i18n="chain_1_d">觅食地与高潮栖息地被分离</div>
-                                </div>
-                            </div>
-                            <div class="chain__item">
-                                <div class="chain__num">2</div>
-                                <div>
-                                    <div class="chain__t" data-i18n="chain_2_t">能量成本</div>
-                                    <div class="chain__d" data-i18n="chain_2_d">往返飞行更多 → 恢复时间更少</div>
-                                </div>
-                            </div>
-                            <div class="chain__item">
-                                <div class="chain__num">3</div>
-                                <div>
-                                    <div class="chain__t" data-i18n="chain_3_t">长期后果</div>
-                                    <div class="chain__d" data-i18n="chain_3_d">生存率与繁殖成功率下降</div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="panel__foot">
-                            <button class="btn btn--ghost btn--sm" id="openLightboxBtn" type="button"
-                                data-i18n="panel_btn">
-                                查看图片故事
-                            </button>
-                            <a class="link" href="#strategy" data-i18n="panel_link">对应的解决策略 →</a>
-                        </div>
-                    </div>
-
-                    <div class="orb orb--a" aria-hidden="true"></div>
-                    <div class="orb orb--b" aria-hidden="true"></div>
-                </div>
-            </div>
-        </section>
-
-        <!-- MISSION -->
-        <section id="mission" class="section">
-            <div class="container">
-                <div class="sectionHead">
-                    <h2 data-i18n="mission_title">我们的使命</h2>
-                    <p class="sectionSub" data-i18n="mission_sub">
-                        推动以功能性栖息地为核心的保护：把“间接影响路径”与“连通性”纳入沿海规划、环评与长期监测。
-                    </p>
-                </div>
-
-                <div class="grid grid--3">
-                    <div class="card lift">
-                        <div class="icon">🧭</div>
-                        <h3 data-i18n="mission_1_t">以功能为中心</h3>
-                        <p data-i18n="mission_1_d">不仅看“面积还在不在”，更看栖息地“能不能用”。</p>
-                    </div>
-                    <div class="card lift">
-                        <div class="icon">🌊</div>
-                        <h3 data-i18n="mission_2_t">守护迁飞网络</h3>
-                        <p data-i18n="mission_2_d">局部损伤会在迁飞尺度上放大，关键在于网络稳定性。</p>
-                    </div>
-                    <div class="card lift">
-                        <div class="icon">📈</div>
-                        <h3 data-i18n="mission_3_t">用证据闭环</h3>
-                        <p data-i18n="mission_3_d">长期监测 + 累积效应评估，让保护成果可验证。</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- LEARN: interactive knowledge + quiz -->
-        <section id="learn" class="section section--tint">
-            <div class="container">
-                <div class="sectionHead">
-                    <h2 data-i18n="learn_title">科普：认识勺嘴鹬与迁徙生态</h2>
-                    <p class="sectionSub" data-i18n="learn_sub">
-                        用 3 分钟理解：为什么黄海潮间带重要？什么是“功能性栖息地”？为什么间接影响更危险？
-                    </p>
-                </div>
-
-                <div class="grid grid--2">
-                    <div class="card">
-                        <h3 data-i18n="learn_1_t">关键事实</h3>
-                        <ul class="bullets">
-                            <li data-i18n="fact_1">勺嘴鹬被列为 IUCN 极危（CR）。</li>
-                            <li data-i18n="fact_2">黄海潮间带是迁徙滨鸟的重要停歇地；研究指出泥滩在近几十年缩减超过 65%。</li>
-                            <li data-i18n="fact_3">保护的难点在于：影响常常是长期、累积、滞后出现。</li>
-                        </ul>
-                        <div class="refs">
-                            <span class="refPill">IUCN</span>
-                            <span class="refPill">Nature Comms</span>
-                            <span class="refPill">ISSAP</span>
-                        </div>
-                    </div>
-
-                    <div class="card">
-                        <h3 data-i18n="learn_2_t">互动小测：你更懂“间接影响”了吗？</h3>
-                        <div class="quiz" id="quiz">
-                            <!-- injected by JS -->
-                        </div>
-                    </div>
-                </div>
-
-                <div class="flyway card">
-                    <div class="flyway__head">
-                        <h3 data-i18n="flyway_title">可交互迁飞链条（点击节点）</h3>
-                        <p class="muted" data-i18n="flyway_sub">每个节点代表“停歇地功能”对迁徙成败的重要性。</p>
-                    </div>
-
-                    <div class="flyway__nodes" id="flywayNodes" aria-label="Flyway nodes"></div>
-                    <div class="flyway__info" id="flywayInfo" aria-live="polite"></div>
-                </div>
-            </div>
-        </section>
-
-        <!-- THREATS with Tabs -->
-        <section id="threats" class="section">
-
-            <div class="container">
-                <div class="sectionHead">
-                    <h2 data-i18n="threats_title">威胁：间接影响如何发生</h2>
-                    <p class="sectionSub" data-i18n="threats_sub">
-                        许多开发项目不会“直接造成死亡”，但会改变栖息地结构与可达性，带来持续能量成本与长期种群风险。
-                    </p>
-                </div>
-
-                <div class="tabs card">
-                    <div class="tabs__bar" role="tablist" aria-label="Threat tabs">
-                        <button class="tab is-active" role="tab" aria-selected="true" data-tab="frag"
-                            data-i18n="tab_frag">破碎化</button>
-                        <button class="tab" role="tab" aria-selected="false" data-tab="access"
-                            data-i18n="tab_access">可达性下降</button>
-                        <button class="tab" role="tab" aria-selected="false" data-tab="cumu"
-                            data-i18n="tab_cumu">累积效应</button>
-                    </div>
-                    <div class="tabs__content">
-                        <div class="tabPanel is-active" data-panel="frag">
-                            <h3 data-i18n="tp_frag_t">觅食地与高潮栖息地分离</h3>
-                            <p class="muted" data-i18n="tp_frag_d">距离拉大 → 往返飞行增加 → 能量消耗上升 → 觅食效率下降。</p>
-                        </div>
-                        <div class="tabPanel" data-panel="access">
-                            <h3 data-i18n="tp_access_t">干扰叠加让“有面积但不好用”</h3>
-                            <p class="muted" data-i18n="tp_access_d">道路、施工、人类活动、夜间照明都会降低栖息地可用性与可达性。</p>
-                        </div>
-                        <div class="tabPanel" data-panel="cumu">
-                            <h3 data-i18n="tp_cumu_t">长期、累积、滞后出现</h3>
-                            <p class="muted" data-i18n="tp_cumu_d">单个项目看似影响不大，但多个项目叠加会显著放大风险。</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Tongzhou Bay case card -->
-                <div class="caseCard card">
-                    <div class="caseCard__media">
-                        <img id="caseImg" src="./images/pv-1.jpg" alt="Tongzhou Bay coastal development material" />
-                        <button class="caseCard__zoom btn btn--ghost btn--sm" type="button" id="openCaseLightboxBtn"
-                            data-i18n="case_zoom">
-                            点击放大
-                        </button>
-                    </div>
-
-                    <div class="caseCard__copy">
-                        <div class="badge" data-i18n="case_badge">Tongzhou Bay · Case</div>
-                        <h3 data-i18n="case_t">通州湾：从“开发项目”到“间接影响链条”</h3>
-
-                        <p class="muted" data-i18n="case_intro">通州湾及周边潮间带位于黄海迁飞通道上，是勺嘴鹬等滨鸟迁徙季的重要停歇与补给地点。我们用这一案例把“开发场景”转译成可理解的间接影响链条。</p>
-
-                        <ul class="bullets caseBullets">
-                            <li data-i18n="case_li1">开发/光伏等工程可能造成栖息地破碎化：觅食地与高潮栖息地被分离。</li>
-                            <li data-i18n="case_li2">往返距离↑ → 能量成本↑ → 觅食与恢复时间被挤压（indirect harm）。</li>
-                            <li data-i18n="case_li3">影响多为长期、累积、滞后出现：需要功能性栖息地与连通性导向的保护。</li>
-                        </ul>
-
-                        <div class="caseChain">
-                            <span class="refPill" data-i18n="case_chain">破碎化 → 距离↑ → 能量成本↑ → 觅食效率↓ → 生存/繁殖↓</span>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- PV material gallery (click to open lightbox) -->
-                <div class="pvGallery card">
-                    <div class="pvGallery__head">
-                        <h3 data-i18n="pv_t">通州湾保护材料：沿海光伏/开发影像</h3>
-                        <p class="muted" data-i18n="pv_d">
-                            点击图片可放大查看；用于呈现沿海开发与栖息地功能变化之间的关系。
-                        </p>
-                    </div>
-
-                    <div class="pvGallery__grid" id="pvGrid">
-                        <!-- injected by JS from assets.json pvImages -->
-                    </div>
-                </div>
-
-                <div class="callout">
-                    <div class="callout__icon" aria-hidden="true">✓</div>
-                    <div>
-                        <div class="callout__title" data-i18n="callout_t">关键结论</div>
-                        <div class="callout__text" data-i18n="callout_d">保护需要覆盖“功能性连通性”和“间接影响路径”，而不只是保护区边界。</div>
-                    </div>
-                </div>
-            </div>
-
-            
-</section>
-
-        <!-- STRATEGY -->
-        <section id="strategy" class="section section--tint">
-            <div class="container">
-                <div class="sectionHead">
-                    <h2 data-i18n="strategy_title">我们的保护策略</h2>
-                    <p class="sectionSub" data-i18n="strategy_sub">
-                        面向沿海开发现实，优先减少 indirect harm：把“功能性栖息地”写进规划、环评与监测闭环。
-                    </p>
-                </div>
-
-                <div class="grid grid--3">
-                    <div class="card lift">
-                        <div class="icon">🧩</div>
-                        <h3 data-i18n="s_1_t">保护功能性连通性</h3>
-                        <p data-i18n="s_1_d">把觅食地与高潮栖息地作为一个整体来保护，避免“孤岛式保护”。</p>
-                    </div>
-                    <div class="card lift">
-                        <div class="icon">📏</div>
-                        <h3 data-i18n="s_2_t">距离阈值与缓冲带</h3>
-                        <p data-i18n="s_2_d">控制往返距离，并减少道路/工地/照明等干扰叠加。</p>
-                    </div>
-                    <div class="card lift">
-                        <div class="icon">🧾</div>
-                        <h3 data-i18n="s_3_t">区域级累积效应评估</h3>
-                        <p data-i18n="s_3_d">从项目级短期环评升级到区域级长期评估：破碎化、可达性、能量成本。</p>
-                    </div>
-                    <div class="card lift">
-                        <div class="icon">🛰️</div>
-                        <h3 data-i18n="s_4_t">长期监测与反馈</h3>
-                        <p data-i18n="s_4_d">持续监测到达率、停歇时长与潮滩利用，验证并迭代措施。</p>
-                    </div>
-                    <div class="card lift">
-                        <div class="icon">🤝</div>
-                        <h3 data-i18n="s_5_t">跨项目/跨区域协同</h3>
-                        <p data-i18n="s_5_d">鸟按迁飞网络使用栖息地，规划也应跨区域协同。</p>
-                    </div>
-                    <div class="card lift">
-                        <div class="icon">🌙</div>
-                        <h3 data-i18n="s_6_t">减少干扰优先</h3>
-                        <p data-i18n="s_6_d">管理人流车流、噪声与夜间灯光，提升栖息地“可用性”。</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- ACTION -->
-        <section id="action" class="section">
-            <div class="container">
-                <div class="sectionHead">
-                    <h2 data-i18n="action_title">现在就行动</h2>
-                    <p class="sectionSub" data-i18n="action_sub">记录、传播、支持更好的保护与规划。</p>
-                </div>
-
-                <div class="grid grid--2">
-                    <div class="card">
-                        <h3 data-i18n="a_1_t">参与观察与记录</h3>
-                        <ul class="bullets">
-                            <li data-i18n="a_1_li1">关注迁徙季关键停歇地与潮滩生态变化。</li>
-                            <li data-i18n="a_1_li2">加入公民科学平台上传观测记录（地点、时间、数量）。</li>
-                            <li data-i18n="a_1_li3">支持基于数据的长期监测与公开透明评估。</li>
-                        </ul>
-                    </div>
-
-                    <div class="card">
-                        <h3 data-i18n="a_2_t">让“功能性栖息地”被理解</h3>
-                        <ul class="bullets">
-                            <li data-i18n="a_2_li1">把讨论从“有没有保护区”推进到“还能不能用”。</li>
-                            <li data-i18n="a_2_li2">支持区域级规划与累积效应评估，减少隐性风险。</li>
-                            <li data-i18n="a_2_li3">与社区、学校与机构分享“间接影响路径”。</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div class="ctaBand">
-                    <div>
-                        <div class="ctaBand__t" data-i18n="cta_t">一行讲清 indirect harm</div>
-                        <div class="ctaBand__d" data-i18n="cta_d">破碎化 → 距离增加 → 能量成本上升 → 觅食效率下降 → 生存/繁殖下降</div>
-                    </div>
-                    <button class="btn" id="copyChainBtn" type="button" data-i18n="cta_btn">复制</button>
-                </div>
-
-                <div class="supportRow">
-                    <a class="btn btn--sm" href="https://www.youtube.com/watch?v=lkQTe0Wdo2k" target="_blank" rel="noopener noreferrer" data-i18n="btn_video">Watch video</a>
-                </div>
-
-
-                <div class="resource card">
-                    <h3 data-i18n="res_title">权威来源</h3>
-                    <ul class="bullets">
-                        <li><a class="link" target="_blank" rel="noreferrer"
-                                href="https://www.iucnredlist.org/species/21474/45174127">IUCN Red List</a></li>
-                        <li><a class="link" target="_blank" rel="noreferrer"
-                                href="https://www.nature.com/articles/ncomms14895">Studds et al. 2017, Nature
-                                Communications</a></li>
-                        <li><a class="link" target="_blank" rel="noreferrer"
-                                href="https://eaaflyway.org/wp-content/uploads/2025/11/DD.14_ISSAP_for_the_Conservation_of_the_SBS.pdf">EAAFP
-                                ISSAP (2025)</a></li>
-                        <li><a class="link" target="_blank" rel="noreferrer"
-                                href="https://datazone.birdlife.org/species/factsheet/spoon-billed-sandpiper-calidris-pygmaea">BirdLife
-                                factsheet</a></li>
-                    </ul>
-                    <p class="muted small">
-                        Facts: CR status  · Yellow Sea mudflats shrink >65%
-                         · ISSAP context  ·
-                        BirdLife overview 
-                    </p>
-                </div>
-
-                <div class="supplement card">
-                    <h3 data-i18n="supp_t">补充文件</h3>
-                    <p class="muted" data-i18n="supp_d">下载原始表格与 PDF 报告，用于进一步核对与延伸阅读。</p>
-
-                    <div class="supp__grid">
-                        <div class="supp__item">
-                            <div class="badge">PDF</div>
-                            <div class="supp__meta">
-                                <div class="supp__name" data-i18n="supp_pdf_name">CCWC 2012–2019 报告</div>
-                                <div class="muted small" data-i18n="supp_pdf_desc">可在线查看或下载。</div>
-                            </div>
-                            <div class="supp__actions">
-                                <a class="btn btn--ghost btn--sm" href="./docs/CCWC_2012-2019.pdf" target="_blank" rel="noopener noreferrer" data-i18n="btn_view">在线查看</a>
-                                <a class="btn btn--sm" href="./docs/CCWC_2012-2019.pdf" download data-i18n="btn_download">下载</a>
-                            </div>
-                        </div>
-
-                        <div class="supp__item">
-                            <div class="badge">XLSX</div>
-                            <div class="supp__meta">
-                                <div class="supp__name" data-i18n="supp_xlsx_name">Dongling 数据表（2012–2019）</div>
-                                <div class="muted small" data-i18n="supp_xlsx_desc">建议下载后查看与筛选。</div>
-                            </div>
-                            <div class="supp__actions">
-                                <a class="btn btn--sm" href="./docs/CW2012-2019_Dongling.xlsx" download data-i18n="btn_download">下载</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-
-                <footer class="footer">
-                    <div class="footer__left">
-                        <div class="footer__brand">
-                            <span class="brand__mark" aria-hidden="true"></span>
-                            <span class="footer__name" data-i18n="brand">勺嘴鹬保护网络</span>
-                        </div>
-                        <div class="footer__note" data-i18n="footer_note">Protecting functional habitat across the
-                            Yellow Sea flyway.</div>
-                    </div>
-                    <div class="footer__right">
-                        <a class="link" href="#top" data-i18n="back_top">回到顶部 ↑</a>
-                    </div>
-                </footer>
-            </div>
-        </section>
-    </main>
-
-    <!-- Lightbox -->
-    <div class="lightbox" id="lightbox" aria-hidden="true">
-        <div class="lightbox__backdrop" id="lbBackdrop"></div>
-        <div class="lightbox__panel" role="dialog" aria-modal="true" aria-label="Image story">
-            <button class="lightbox__close" id="lbClose" aria-label="Close">×</button>
-            <div class="lightbox__grid">
-                <img class="lightbox__img" id="lbImg" alt="story image" />
-                <div class="lightbox__copy">
-                    <h3 id="lbTitle"> </h3>
-                    <p class="muted" id="lbDesc"> </p>
-                    <div class="lightbox__nav">
-                        <button class="btn btn--ghost btn--sm" id="lbPrev">←</button>
-                        <button class="btn btn--ghost btn--sm" id="lbNext">→</button>
-                    </div>
-                    <div class="muted small" data-i18n="lb_note"></div>
-                </div>
-            </div>
-        </div>
+  <a class="skipLink" href="#top" data-i18n="skip_link">跳转到正文</a>
+  <header class="topbar">
+    <div class="container topbar__inner">
+      <a class="brand" href="#top" aria-label="Home" data-i18n-aria="home_label">
+        <svg class="brand__mark" viewBox="0 0 48 48" aria-hidden="true"><circle cx="24" cy="24" r="23" fill="currentColor"/><g fill="none" stroke="#f4f1e7" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M11 25c4-1 5-6 11-7 7-2 12 2 13 7-5 1-8 5-14 4-4 0-7-2-10-4Z"/><path d="m11 25-4 2 5 1m9 1-1 7m7-8 1 8m-13 0h7m3 0h6M22 23c4 0 7 2 10 2"/></g><circle cx="16.5" cy="23.5" r="1" fill="#f4f1e7"/></svg>
+        <span class="brand__copy"><span class="brand__name" data-i18n="brand">勺嘴鹬保护</span><span class="brand__sub" data-i18n="brand_sub">栖息地 · 迁飞区 · 未来</span></span>
+      </a>
+      <nav id="mainNav" class="nav" aria-label="Primary navigation" data-i18n-aria="nav_label">
+        <a href="#mission" data-i18n="nav_mission">项目理念</a>
+        <a href="#learn" data-i18n="nav_learn">认识勺嘴鹬</a>
+        <a href="#threats" data-i18n="nav_threats">沿海案例</a>
+        <a href="#strategy" data-i18n="nav_strategy">保护策略</a>
+        <a href="#resources" data-i18n="nav_resources">资料来源</a>
+      </nav>
+      <div class="topbar__actions">
+        <button id="langBtn" class="langButton" type="button" aria-label="Read in English">EN</button>
+        <a class="btn btn--sm topbar__cta" href="#action"><span data-i18n="nav_action">参与行动</span><span aria-hidden="true">↗</span></a>
+        <button id="menuBtn" class="menuButton" type="button" aria-controls="mainNav" aria-expanded="false" aria-label="Open navigation" data-i18n-aria="menu_open"><span></span><span></span></button>
+      </div>
     </div>
+  </header>
 
-    <script src="./i18n.js"></script>
-    <script src="./app.js"></script>
+  <main id="top" tabindex="-1">
+    <section class="hero" aria-labelledby="heroTitle">
+      <div class="container hero__grid">
+        <div class="hero__copy">
+          <p class="eyebrow"><span class="statusDot" aria-hidden="true"></span><span data-i18n="hero_pill">黄海 · 东亚—澳大利西亚迁飞区</span></p>
+          <h1 id="heroTitle" class="hero__title"><span data-i18n="hero_title_1">一只小鸟，</span><span class="hero__titleAccent" data-i18n="hero_title_2">一整条海岸的未来。</span></h1>
+          <p class="hero__lead" data-i18n="hero_lead">勺嘴鹬的迁徙，依赖一处处可以觅食、停歇和恢复体力的潮滩。守护它，也意味着守护黄海沿岸彼此连接的栖息地。</p>
+          <div class="hero__ctas"><a class="btn" href="#learn"><span data-i18n="hero_cta_primary">认识勺嘴鹬</span><span aria-hidden="true">↗</span></a><a class="textLink" href="#threats"><span data-i18n="hero_cta_secondary">探索通州湾案例</span><span aria-hidden="true">→</span></a></div>
+          <div class="hero__project"><span class="hero__projectLine" aria-hidden="true"></span><p><span data-i18n="project_course">昆山杜克大学 · Environment101</span><span data-i18n="project_type">小组期末项目 / 保护科普与环境传播</span></p></div>
+        </div>
+        <figure class="hero__visual">
+          <div class="hero__photo"><div id="heroBg" class="hero__bg" role="img" aria-label="Spoon-billed Sandpipers on a mudflat"></div><span class="speciesTag"><i>Calidris pygmaea</i><span data-i18n="species_tag">勺嘴鹬 · 潮间带生境</span></span><button id="openLightboxBtn" class="imageStory" type="button"><span aria-hidden="true">＋</span><span data-i18n="panel_btn">影像故事</span></button></div>
+          <figcaption class="hero__caption"><div><span class="captionLabel" data-i18n="hero_photo_label">来自潮滩的影像</span><span id="heroCaption">勺嘴鹬 · 潮间带觅食</span></div><div class="hero__controls"><div id="heroThumbs" class="hero__thumbs" role="group" aria-label="Choose a photograph" data-i18n-aria="photo_select"></div><button id="heroPlayBtn" class="playButton" type="button" aria-pressed="false" aria-label="Start slideshow" data-i18n-aria="slideshow_start">▶</button></div></figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="evidenceBand" aria-label="Conservation context" data-i18n-aria="evidence_label">
+      <div class="container evidenceBand__grid">
+        <a class="metric" href="#resources"><span class="metric__k">CR</span><div><h2 class="metric__v" data-i18n="metric_cr">极危物种</h2><p class="metric__s" data-i18n="metric_cr_s">IUCN Red List · 见物种资料</p></div></a>
+        <a class="metric" href="#sources"><span class="metric__k">&gt;65<span class="metric__percent">%</span></span><div><h2 class="metric__v" data-i18n="metric_loss">黄海潮滩历史缩减</h2><p class="metric__s" data-i18n="metric_loss_s">文献报告值 · Studds et al., 2017</p></div></a>
+        <a class="metric" href="#flyway"><span class="metric__k metric__k--letters">EAAF</span><div><h2 class="metric__v" data-i18n="metric_flyway">一条相连的迁飞区</h2><p class="metric__s" data-i18n="metric_flyway_s">东亚—澳大利西亚迁飞区</p></div></a>
+      </div>
+    </section>
+
+    <section id="mission" class="section">
+      <div class="container">
+        <div class="sectionHead"><div><p class="eyebrow"><span class="sectionNumber">01</span><span data-i18n="mission_eyebrow">项目理念 / OUR APPROACH</span></p><h2 data-i18n="mission_title">保护，从理解栖息地开始。</h2></div><p class="sectionSub" data-i18n="mission_sub">这个项目以勺嘴鹬为切入点，探讨沿海开发如何改变栖息地功能，以及保护为何需要超越单一地点与静态边界。</p></div>
+        <div class="principles"><article class="principle"><span class="principle__number">01 /</span><h3 data-i18n="mission_1_t">关注栖息地功能</h3><p data-i18n="mission_1_d">除了保留面积，还要让觅食地与高潮栖息地保持可达、可用、相互连接。</p></article><article class="principle"><span class="principle__number">02 /</span><h3 data-i18n="mission_2_t">理解迁飞网络</h3><p data-i18n="mission_2_d">迁徙连接多个地区。一个关键停歇地的变化，可能影响鸟类接下来的旅程。</p></article><article class="principle"><span class="principle__number">03 /</span><h3 data-i18n="mission_3_t">让证据支持讨论</h3><p data-i18n="mission_3_d">将物种资料、研究文献与课程案例结合，让保护议题更容易理解和追溯。</p></article></div>
+      </div>
+    </section>
+
+    <section id="learn" class="section section--sand">
+      <div class="container">
+        <div class="sectionHead"><div><p class="eyebrow"><span class="sectionNumber">02</span><span data-i18n="learn_eyebrow">认识物种 / THE SPECIES</span></p><h2 data-i18n="learn_title">小小的鸟，漫长的迁徙。</h2></div><p class="sectionSub" data-i18n="learn_sub">从辨识勺嘴鹬，到理解停歇地与能量补给。用几分钟，认识保护背后的生态联系。</p></div>
+        <div class="learnGrid">
+          <article class="speciesCard"><img src="./images/sbs-2.png" alt="Spoon-billed Sandpiper standing on an intertidal flat" data-i18n-alt="species_photo_alt" loading="lazy" width="2048" height="1226"><div class="speciesCard__copy"><p class="eyebrow" data-i18n="field_note">物种笔记 / FIELD NOTE</p><h3 data-i18n="learn_1_t">认识勺嘴鹬</h3><p class="speciesLatin"><i>Calidris pygmaea</i></p><ul class="bullets"><li data-i18n="fact_1">勺嘴鹬具有独特的匙形嘴，被 IUCN 列为极危（CR）。</li><li data-i18n="fact_2">黄海潮滩为迁徙滨鸟提供停歇与补给；2017 年研究报告了超过 65% 的历史潮滩缩减。</li><li data-i18n="fact_3">保护需要兼顾觅食、高潮停歇与低干扰环境。</li></ul><a class="textLink" href="#sources"><span data-i18n="facts_source">查看资料与文献</span><span aria-hidden="true">↗</span></a></div></article>
+          <article class="quizCard"><p class="eyebrow" data-i18n="quiz_eyebrow">停下来想一想 / KNOWLEDGE CHECK</p><h3 data-i18n="learn_2_t">你理解栖息地功能了吗？</h3><p class="muted" data-i18n="quiz_intro">选择一个答案，看看日常观察如何连接到保护问题。</p><div id="quiz" class="quiz"><noscript><p>请启用 JavaScript 体验互动问答。 Enable JavaScript for the interactive quiz.</p></noscript></div></article>
+        </div>
+        <div id="flyway" class="flyway"><div class="flyway__head"><div><p class="eyebrow" data-i18n="flyway_eyebrow">一路相连 / A CONNECTED JOURNEY</p><h3 data-i18n="flyway_title">探索迁飞栖息地网络</h3></div><p class="muted" data-i18n="flyway_sub">点击节点，了解每一类栖息地的作用。</p></div><div id="flywayNodes" class="flyway__nodes" role="group" aria-label="Flyway habitats" data-i18n-aria="flyway_label"></div><div id="flywayInfo" class="flyway__info" aria-live="polite"></div><p class="diagramNote" data-i18n="flyway_note">简化生态示意，非地理地图或个体追踪路线；江苏沿海属于黄海停歇区域。</p></div>
+      </div>
+    </section>
+
+    <section id="threats" class="section">
+      <div class="container">
+        <div class="sectionHead"><div><p class="eyebrow"><span class="sectionNumber">03</span><span data-i18n="threats_eyebrow">沿海案例 / COASTAL PRESSURES</span></p><h2 data-i18n="threats_title">当栖息地依然存在，却不再好用。</h2></div><p class="sectionSub" data-i18n="threats_sub">开发与干扰可能改变鸟类利用空间的方式。栖息地功能的下降，往往通过距离、时间与能量成本逐步体现。</p></div>
+        <div class="threatGrid"><div class="tabs"><div class="tabs__bar" role="tablist" aria-label="Habitat pressures" data-i18n-aria="threat_tabs"><button id="tab-frag" class="tab is-active" type="button" role="tab" aria-selected="true" aria-controls="panel-frag" data-tab="frag" data-i18n="tab_frag">破碎化</button><button id="tab-access" class="tab" type="button" role="tab" aria-selected="false" aria-controls="panel-access" tabindex="-1" data-tab="access" data-i18n="tab_access">可用性下降</button><button id="tab-cumu" class="tab" type="button" role="tab" aria-selected="false" aria-controls="panel-cumu" tabindex="-1" data-tab="cumu" data-i18n="tab_cumu">累积效应</button></div><div class="tabs__content"><article id="panel-frag" class="tabPanel" role="tabpanel" aria-labelledby="tab-frag" tabindex="0"><span class="panelIndex" aria-hidden="true">01</span><h3 data-i18n="tp_frag_t">觅食地与高潮栖息地分离</h3><p data-i18n="tp_frag_d">潮滩与安全的高潮停歇地之间距离增加，可能让鸟类花更多时间飞行，挤压觅食与恢复时间。</p></article><article id="panel-access" class="tabPanel" role="tabpanel" aria-labelledby="tab-access" tabindex="0" hidden><span class="panelIndex" aria-hidden="true">02</span><h3 data-i18n="tp_access_t">面积仍在，可用空间却减少</h3><p data-i18n="tp_access_d">道路、施工、人类活动和照明等干扰，可能降低栖息地的可用性与可达性。</p></article><article id="panel-cumu" class="tabPanel" role="tabpanel" aria-labelledby="tab-cumu" tabindex="0" hidden><span class="panelIndex" aria-hidden="true">03</span><h3 data-i18n="tp_cumu_t">多个变化，叠加成长期压力</h3><p data-i18n="tp_cumu_d">多处开发与持续干扰的共同影响，需要通过区域评估和长期监测来理解。</p></article></div></div><aside class="mechanism"><p class="eyebrow" data-i18n="panel_badge">理解机制 / INDIRECT EFFECTS</p><h3 data-i18n="panel_title">间接影响如何发生？</h3><ol class="chain"><li><span class="chain__num">1</span><div><h4 data-i18n="chain_1_t">空间破碎化</h4><p data-i18n="chain_1_d">觅食与停歇空间的连接变弱</p></div></li><li><span class="chain__num">2</span><div><h4 data-i18n="chain_2_t">能量成本增加</h4><p data-i18n="chain_2_d">往返飞行更多，恢复时间更少</p></div></li><li><span class="chain__num">3</span><div><h4 data-i18n="chain_3_t">潜在长期后果</h4><p data-i18n="chain_3_d">可能影响存活与繁殖状态</p></div></li></ol></aside></div>
+        <article class="caseCard"><div class="caseCard__media"><img id="caseImg" src="./images/pv-1.jpg" alt="Tongzhou Bay spatial planning map supplied with the course project" data-i18n-alt="case_photo_alt" loading="lazy"><button id="openCaseLightboxBtn" class="zoomButton" type="button"><span aria-hidden="true">＋</span><span data-i18n="case_zoom">放大规划图</span></button></div><div class="caseCard__copy"><p class="eyebrow" data-i18n="case_badge">江苏 · 通州湾 / CASE STUDY</p><h3 data-i18n="case_t">把沿海开发放回生态网络中理解。</h3><p data-i18n="case_intro">以课程收集的通州湾规划与沿海开发材料为例，思考开发布局与潮滩、高潮栖息地之间的空间关系。</p><ul class="bullets"><li data-i18n="case_li1">识别开发布局可能带来的空间分隔与干扰。</li><li data-i18n="case_li2">关注鸟类往返距离、觅食时间与能量补给。</li><li data-i18n="case_li3">将案例作为讨论栖息地功能与累积影响的起点。</li></ul><p class="caseNote" data-i18n="case_note">课程案例用于解释潜在影响路径；具体项目影响仍需现场监测与评估。</p></div></article>
+        <div class="pvGallery"><div class="galleryHead"><div><p class="eyebrow" data-i18n="gallery_eyebrow">案例影像 / VISUAL MATERIALS</p><h3 data-i18n="pv_t">从沿海影像看空间变化</h3></div><p class="muted" data-i18n="pv_d">点击图片，查看课程案例资料。</p></div><div id="pvGrid" class="pvGallery__grid"></div></div>
+        <div class="callout"><span class="callout__mark" aria-hidden="true">↳</span><p data-i18n="callout_d">保护的关键，也在于栖息地之间能否保持连接，以及鸟类是否仍能安全地利用它们。</p></div>
+      </div>
+    </section>
+
+    <section id="strategy" class="section section--forest">
+      <div class="container"><div class="sectionHead"><div><p class="eyebrow"><span class="sectionNumber">04</span><span data-i18n="strategy_eyebrow">保护策略 / CONSERVATION IN PRACTICE</span></p><h2 data-i18n="strategy_title">让栖息地，继续发挥作用。</h2></div><p class="sectionSub" data-i18n="strategy_sub">从空间规划到长期监测，以下六个方向将栖息地功能转化为可讨论的保护思路。</p></div><div class="strategyGrid">
+          <article class="strategyItem"><span>01</span><div><h3 data-i18n="s_1_t">保护功能性连通性</h3><p data-i18n="s_1_d">把觅食地与高潮栖息地作为一个整体，保留鸟类使用空间的连接。</p></div></article>
+          <article class="strategyItem"><span>02</span><div><h3 data-i18n="s_2_t">考虑距离与缓冲带</h3><p data-i18n="s_2_d">在规划中关注往返距离，并减少道路、工地和照明带来的干扰。</p></div></article>
+          <article class="strategyItem"><span>03</span><div><h3 data-i18n="s_3_t">评估区域累积影响</h3><p data-i18n="s_3_d">综合多处项目与长期变化，理解破碎化和栖息地可用性的共同影响。</p></div></article>
+          <article class="strategyItem"><span>04</span><div><h3 data-i18n="s_4_t">保持长期监测</h3><p data-i18n="s_4_d">关注鸟类数量、停歇时长与潮滩利用，并用观测反馈改进措施。</p></div></article>
+          <article class="strategyItem"><span>05</span><div><h3 data-i18n="s_5_t">开展跨区域协作</h3><p data-i18n="s_5_d">将地方保护与迁飞区尺度的规划和信息共享连接起来。</p></div></article>
+          <article class="strategyItem"><span>06</span><div><h3 data-i18n="s_6_t">减少日常干扰</h3><p data-i18n="s_6_d">管理人流、车流、噪声和夜间灯光，让已有栖息地更容易被利用。</p></div></article>
+        </div><a class="forestLink" href="#sources"><span data-i18n="strategy_source">进一步阅读保护资料</span><span aria-hidden="true">↗</span></a></div>
+    </section>
+
+    <section id="action" class="section">
+      <div class="container"><div class="sectionHead"><div><p class="eyebrow"><span class="sectionNumber">05</span><span data-i18n="action_eyebrow">参与行动 / SMALL STEPS, SHARED KNOWLEDGE</span></p><h2 data-i18n="action_title">从一次观察，一次分享开始。</h2></div><p class="sectionSub" data-i18n="action_sub">了解、记录与传播，都是参与保护讨论的方式。</p></div><div class="actionGrid"><article><span class="actionIcon" aria-hidden="true">↗</span><h3 data-i18n="a_1_t">观察与记录</h3><ul class="bullets"><li data-i18n="a_1_li1">关注迁徙季关键停歇地的鸟类与潮滩变化。</li><li data-i18n="a_1_li2">在合适距离观察，避免接近、追赶或打扰鸟群。</li><li data-i18n="a_1_li3">记录地点、日期与数量，支持持续的生态观察。</li></ul></article><article><span class="actionIcon" aria-hidden="true">↗</span><h3 data-i18n="a_2_t">分享与理解</h3><ul class="bullets"><li data-i18n="a_2_li1">分享资料时，同时保留来源与研究背景。</li><li data-i18n="a_2_li2">讨论保护面积，也讨论栖息地的连接与可用性。</li><li data-i18n="a_2_li3">与学校、社区分享这个项目中的保护知识。</li></ul></article></div><div class="ctaBand"><div><p class="eyebrow" data-i18n="cta_t">把这条生态联系带走</p><p class="ctaBand__d" data-i18n="cta_d">破碎化 → 往返距离增加 → 能量成本上升 → 觅食与恢复时间减少 → 潜在长期影响</p></div><button id="copyChainBtn" class="btn btn--outline" type="button"><span data-i18n="cta_btn">复制这段话</span><span aria-hidden="true">↗</span></button><p id="copyStatus" class="copyStatus" role="status"></p></div></div>
+    </section>
+
+    <section id="resources" class="section section--sand">
+      <div class="container"><div class="sectionHead"><div><p class="eyebrow"><span class="sectionNumber">06</span><span data-i18n="resources_eyebrow">资料与来源 / THE READING ROOM</span></p><h2 data-i18n="res_title">沿着证据，继续探索。</h2></div><p class="sectionSub" data-i18n="res_intro">物种资料、研究文献与课程补充材料，为进一步阅读提供入口。</p></div><div id="sources" class="sources"><a class="sourceRow" href="https://www.iucnredlist.org/species/21474/45174127" target="_blank" rel="noopener noreferrer"><span class="sourceType">01 / IUCN</span><div><h3>IUCN Red List</h3><p data-i18n="source_iucn">勺嘴鹬物种评估与受威胁等级</p></div><span aria-hidden="true">↗</span></a><a class="sourceRow" href="https://www.nature.com/articles/ncomms14895" target="_blank" rel="noopener noreferrer"><span class="sourceType">02 / 2017</span><div><h3>Studds et al. · Nature Communications</h3><p data-i18n="source_studds">迁徙滨鸟种群下降与黄海潮滩停歇地的关系</p></div><span aria-hidden="true">↗</span></a><a class="sourceRow" href="https://eaaflyway.org/wp-content/uploads/2025/11/DD.14_ISSAP_for_the_Conservation_of_the_SBS.pdf" target="_blank" rel="noopener noreferrer"><span class="sourceType">03 / EAAFP</span><div><h3 data-i18n="source_plan_title">勺嘴鹬物种行动计划相关文件</h3><p data-i18n="source_plan">2025 年 MOP12 会议文件 · 迁飞区保护背景</p></div><span aria-hidden="true">↗</span></a><a class="sourceRow" href="https://datazone.birdlife.org/species/factsheet/spoon-billed-sandpiper-calidris-pygmaea" target="_blank" rel="noopener noreferrer"><span class="sourceType">04 / BIRDLIFE</span><div><h3>BirdLife DataZone</h3><p data-i18n="source_birdlife">勺嘴鹬物种概览与延伸资料</p></div><span aria-hidden="true">↗</span></a></div><p class="sourceNote" data-i18n="res_facts">“>65%”为 2017 年文献报告的历史潮滩缩减背景，并非实时监测值或本项目计算结果。</p><div class="supplement"><div><p class="eyebrow" data-i18n="supp_eyebrow">课程资料 / PROJECT ARCHIVE</p><h3 data-i18n="supp_t">补充材料</h3><p class="muted" data-i18n="supp_d">保留课程项目中的原始报告和表格，供查看与延伸阅读。</p></div><div class="supp__grid"><article class="supp__item"><span class="fileType">PDF</span><div class="supp__meta"><h4 data-i18n="supp_pdf_name">CCWC 2012–2019 报告</h4><p class="muted small">8.0 MB · 2012–2019</p></div><div class="supp__actions"><a class="textLink" href="./docs/CCWC_2012-2019.pdf" target="_blank" rel="noopener noreferrer" data-i18n="btn_view">在线查看</a><a class="textLink" href="./docs/CCWC_2012-2019.pdf" download data-i18n="btn_download">下载 ↓</a></div></article><article class="supp__item"><span class="fileType">XLSX</span><div class="supp__meta"><h4 data-i18n="supp_xlsx_name">Dongling 数据表（2012–2019）</h4><p class="muted small">81 KB · 2012–2019</p></div><div class="supp__actions"><a class="textLink" href="./docs/CW2012-2019_Dongling.xlsx" download data-i18n="btn_download">下载 ↓</a></div></article></div></div><a class="textLink supplementaryLink" href="https://www.youtube.com/watch?v=lkQTe0Wdo2k" target="_blank" rel="noopener noreferrer"><span data-i18n="btn_video">延伸观看：滨鸟主题动画</span><span aria-hidden="true">↗</span></a></div>
+    </section>
+  </main>
+
+  <footer class="footer"><div class="container"><div class="footer__top"><div><p class="footer__title" data-i18n="footer_title">为潮滩留一席之地。</p><p class="footer__note" data-i18n="footer_note">理解栖息地，让保护从这里继续。</p></div><a class="textLink" href="#top"><span data-i18n="back_top">回到顶部</span><span aria-hidden="true">↑</span></a></div><div class="footer__bottom"><p data-i18n="footer_course">昆山杜克大学 · Environment101 小组期末项目</p><div><a href="https://github.com/Will1202/sbs-conservation-site" target="_blank" rel="noopener noreferrer">GitHub ↗</a><span>ZH / EN</span><span>Habitat &amp; Flyway</span></div></div></div></footer>
+  <div id="lightbox" class="lightbox" hidden><div id="lbBackdrop" class="lightbox__backdrop"></div><div class="lightbox__panel" role="dialog" aria-modal="true" aria-labelledby="lbTitle" aria-describedby="lbDesc"><button id="lbClose" class="lightbox__close" type="button" aria-label="Close image" data-i18n-aria="lb_close">×</button><div class="lightbox__grid"><img id="lbImg" class="lightbox__img" alt=""><div class="lightbox__copy"><p class="eyebrow" data-i18n="gallery_eyebrow">案例影像 / VISUAL MATERIALS</p><h2 id="lbTitle"></h2><p id="lbDesc"></p><div class="lightbox__nav"><button id="lbPrev" class="btn btn--outline btn--sm" type="button" aria-label="Previous image" data-i18n-aria="lb_prev">←</button><button id="lbNext" class="btn btn--outline btn--sm" type="button" aria-label="Next image" data-i18n-aria="lb_next">→</button><span id="lbCounter" class="small"></span></div><p class="muted small" data-i18n="lb_note">← → 切换图片 · Esc 关闭</p></div></div></div></div>
 </body>
-
 </html>
