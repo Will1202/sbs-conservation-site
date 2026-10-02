@@ -1,5 +1,9 @@
 window.I18N = {
   "zh": {
+    "effects_pause": "暂停视觉动效",
+    "effects_resume": "开启视觉动效",
+    "frame_label": "物种影像 / SPECIES PROFILE",
+    "frame_footer": "栖息地 / 迁飞区 / 保护",
     "page_title": "勺嘴鹬保护 | 栖息地与迁飞区",
     "page_description": "一个中英双语保护科普项目，探讨勺嘴鹬、黄海停歇地，以及沿海开发对栖息地功能的潜在影响。",
     "brand": "勺嘴鹬保护",
@@ -159,6 +163,10 @@ window.I18N = {
     "assets_unavailable": "图片列表暂时无法加载。"
   },
   "en": {
+    "effects_pause": "Pause visual effects",
+    "effects_resume": "Enable visual effects",
+    "frame_label": "SPECIES PROFILE / EAAF",
+    "frame_footer": "HABITAT / FLYWAY / CONSERVATION",
     "page_title": "Spoon-billed Sandpiper | Habitat & Flyway Conservation",
     "page_description": "A bilingual conservation education project exploring the Spoon-billed Sandpiper, Yellow Sea stopover habitats, and the ecological effects of coastal development.",
     "brand": "Spoon-billed Sandpiper",

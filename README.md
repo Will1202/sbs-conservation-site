@@ -33,7 +33,9 @@ The habitat-node diagram is an ecological schematic. Jiangsu is part of the Yell
 
 ## Design and Interaction
 
-The visual design uses an off-white background, forest green, editorial typography, and photographs retained from the original project. Numbered sections guide the reader from species knowledge to conservation questions.
+The visual design combines a midnight blue background, mint and cyan accents, glass panels, and photographs retained from the original project. Particle connections, orbital lines, and subtle hover lighting complement numbered sections that guide the reader from species knowledge to conservation questions.
+
+Decorative motion can be paused with the lightning button in the navigation. The site also respects the system’s reduced-motion preference and suspends the particle animation while the hero is outside the viewport or the browser tab is hidden.
 
 - **Chinese and English:** the language switch updates page copy, image captions, quiz feedback, and habitat descriptions. The browser remembers the reader’s choice.
 - **Responsive navigation:** desktop navigation becomes an expandable menu on smaller screens.
@@ -82,6 +84,7 @@ sbs-conservation-site/
 ├── index.html                # Page structure, metadata, and resource links
 ├── styles.css                # Visual design and responsive layouts
 ├── app.js                    # Navigation, translations, quiz, galleries, and dialogs
+├── effects.js                # Optional particle, pointer, and reading-progress effects
 ├── i18n.js                   # Chinese and English interface copy
 ├── assets.json               # Photograph paths and bilingual captions
 ├── images/                   # Original project images and site icon

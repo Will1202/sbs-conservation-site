@@ -82,7 +82,7 @@ function setupNavigation() {
     link.addEventListener("click", () => {
       closeMenu();
       const section = document.querySelector(link.getAttribute("href"));
-      if (section && window.matchMedia("(max-width: 1000px)").matches) {
+      if (section && window.matchMedia("(max-width: 1070px)").matches) {
         section.setAttribute("tabindex", "-1");
         section.focus({ preventScroll: true });
       }
@@ -92,7 +92,7 @@ function setupNavigation() {
     if (!event.target.closest(".topbar")) closeMenu();
   });
   window.addEventListener("resize", () => {
-    if (window.innerWidth > 1000) closeMenu();
+    if (window.innerWidth > 1070) closeMenu();
   });
   if (!("IntersectionObserver" in window)) return;
   const observer = new IntersectionObserver(entries => {
@@ -115,6 +115,7 @@ function renderHeroCaption() {
   const title = lang === "zh" ? item.zhTitle : item.enTitle;
   document.getElementById("heroCaption").textContent = title;
   document.getElementById("heroBg").setAttribute("aria-label", title);
+  document.getElementById("heroImageIndex").textContent = `${String(heroIdx + 1).padStart(2, "0")} / ${String(ASSETS.heroImages.length).padStart(2, "0")}`;
 }
 
 function setHeroBg(index, immediate = false) {
